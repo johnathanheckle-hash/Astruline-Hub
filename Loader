@@ -1,6 +1,5 @@
 local HttpService = game:GetService("HttpService")
 
--- 1. Put your game IDs and their script URLs here
 local gameScripts = {
     [12345678] = "https://githubusercontent.com",
     [87654321] = "https://githubusercontent.com"
