@@ -5,7 +5,7 @@ local gameScripts = {
     [87654321] = "https://githubusercontent.com"
 }
 
-local universalScript = "https://githubusercontent.com"
+local universalScript = "https://raw.githubusercontent.com/johnathanheckle-hash/Astruline-Hub/refs/heads/main/Universal"
 
 local currentId = game.PlaceId
 local targetUrl = gameScripts[currentId] or universalScript
