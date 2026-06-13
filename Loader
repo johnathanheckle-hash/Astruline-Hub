@@ -1,21 +1,14 @@
-local HttpService = game:GetService("HttpService")
-
-local gameScripts = {
-    [12345678] = "https://githubusercontent.com",
-    [87654321] = "https://githubusercontent.com"
+local games = {
+    [123456789] = "https://githubusercontent.com",
+    [987654321] = "https://githubusercontent.com",
 }
 
 local universalScript = "https://raw.githubusercontent.com/johnathanheckle-hash/Astruline-Hub/refs/heads/main/Universal"
 
-local currentId = game.PlaceId
-local targetUrl = gameScripts[currentId] or universalScript
+local currentPlaceId = game.PlaceId
 
-local success, scriptCode = pcall(function()
-    return HttpService:GetAsync(targetUrl)
-end)
-
-if success then
-    loadstring(scriptCode)()
+if games[currentPlaceId] then
+    loadstring(game:HttpGet(games[currentPlaceId]))()
 else
-    warn("Failed to load script.")
+    loadstring(game:HttpGet(universalScript))()
 end
